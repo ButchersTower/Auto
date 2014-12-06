@@ -1,0 +1,74 @@
+ articles, nouns, pronouns, adjectives, verbs, adverbs,
+ 	conjunctions, prepositions, and interjections
+
+
+Want to have input be regardless of capitals.
+
+Need to have tenses and memory so it can remember what something
+	was doing like half and hour ago.
+
+If after the noun/ pronoun and a verb then if there is an article
+	before and a noun then add the number of that object in player
+	inv is one.
+
+Start asking questions.
+
+Typing like  "/sayMemory"  should print everything that the computer	Shift + B
+	remembers.
+
+Make a list of verbs that dignify possession.
+Making possession should be a status effect like the rest except it
+	can have multiple conditions at once.
+"I have love for you" Shouldn't dignify possession. Its a status
+	(To love, you)
+
+
+I have an arm
+I want an arm
+
+I do not want an arm
+
+
+method that takes an AR and adds to the end of it
+
+Some verbs can have multiple states, like "to possess" or "to want"
+Some can only have one like "i feel"???????
+
+How will i differentiate
+	"I smell good" (i am good at smelling)
+	"I smell good" (my scent is good)
+
+Feel
+taste
+look (see)
+
+
+
+Why are we here?
+How will you know?
+When will it rain?
+- adverbs
+
+Who will go with me?
+- pronoun
+
+What time is it?
+-adjective (determiner) 
+
+"How beautiful this day is!" -- adverb
+"How are you?" -- interrogative
+"How you do it is important." -- about this one there's disagreement
+	in linguistics. Some say it's an adverb, others say it relative pronoun 
+
+I have two brothers - adjective.
+Two of my friends are staying with me now. - pronoun
+He put two and two together and realised who had done it. - noun (I think!)
+
+
+Is there any benefit from linking words that negate themselves
+	like "cool", "uncool"?
+
+Find verb method that runs through every String in ArrayList<String[]> Verb.
+
+
+
