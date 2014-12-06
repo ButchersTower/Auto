@@ -18,7 +18,11 @@ public class ReadAndWrite {
 		BufferedReader inputStream = null;
 		strings = new ArrayList<String>();
 		try {
-			InputStream is = new FileInputStream("PressionSave1.txt");
+			// InputStream is = new
+			// FileInputStream(this.getClass().PressionSave1.txt");
+			InputStream is = new FileInputStream(
+					"src/Auto/pression/res/PressionSave1.txt");
+			// InputStream is = new FileInputStream("PressionSave1.txt");
 			inputStream = new BufferedReader(new InputStreamReader(is));
 			String l;
 			while ((l = inputStream.readLine()) != null) {
