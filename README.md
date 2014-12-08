@@ -3,8 +3,8 @@ Auto
 
 Primitive AI communication program
 
-Stem is the communication program.
+Leaf is an organized remake of the communication program.
+
+Stem is the origional communication program.
 
 Pression is the visual code generator for creating possible sentences.
-
-Leaf will be an organized remake of Stem.
