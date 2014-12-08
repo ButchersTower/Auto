@@ -707,6 +707,7 @@ public class Panel extends JPanel implements Runnable, KeyListener,
 				understandAll = false;
 			}
 		}
+
 		System.out.println();
 		if (!understandAll) {
 			outPutText("(C) MisUnderstood Negative One");
