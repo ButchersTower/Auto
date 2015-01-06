@@ -33,19 +33,19 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 	ArrayList<String> st = new ArrayList<String>();
 
 	String[][] bigTree = { { "Noun" }, { "Pronoun" }, { "Question" },
-			{ "Verb" }, { "Article" }, { "Adjective" }, { "Noun" }, { "Noun" },
-			{ "Adjective" }, { "Verb" }, { "Adjective" }, { "Verb" },
-			{ "Adverb" }, { "Adjective" }, { "Adverb" }, { "Noun" },
-			{ "Adjective" }, { "Noun" }, { "Preposition" }, { "Noun" },
-			{ "Verb" }, { "Noun" }, { "Verb" }, { "Pronoun" }, { "Verb" } };
-	int[][][] treeGoesTo = { { { 3 } }, { { 3 } }, { { 20 } },
-			{ { 4, 7, 11, 12, 13 } }, { { 5 } }, { { 6 } }, { { -1 } },
-			{ { 8 } }, { { 9 } }, { { 10 } }, { { -1 } }, { { 14, 15, 16 } },
-			{ { -1 } }, { { -1 } }, { { -1 } }, { { -1 } }, { { 17 } },
-			{ { 18 } }, { { 19 } }, { { -1 } }, { { 21, 23 } }, { { 22 } },
-			{ { -1 } }, { { 24 } }, { { -1 } } };
-	int[] endWhen = { -1, -1, -1, -1, -1, -1, -8, -3, -1, -1, -6, -1, -4, -2,
-			-1, -7, -7, -1, -1, -11, -1, -1, -5, -1, -5 };
+			{ "Verb" }, { "Adverb" }, { "Article" }, { "Adj" }, { "Noun" },
+			{ "Verb" }, { "Noun" }, { "Pronoun" }, { "Verb" }, { "Verb" },
+			{ "Adj" }, { "Noun" }, { "Adj" }, { "Verb" }, { "Adj" },
+			{ "Verb" }, { "Noun" }, { "Adverb" }, { "Adj" }, { "Noun" },
+			{ "Preposition" }, { "Noun" }, { "Pronoun" } };
+	int[][][] treeGoesTo = { { { 3 } }, { { 3 } }, { { 8 } },
+			{ { 4, 13, 5, 14, 18, 25 } }, { { -1 } }, { { 6 } }, { { 7 } },
+			{ { -1 } }, { { 10, 9 } }, { { 12 } }, { { 11 } }, { { -1 } },
+			{ { -1 } }, { { -1 } }, { { 15 } }, { { 16 } }, { { 17 } },
+			{ { -1 } }, { { 19, 20, 21 } }, { { -1 } }, { { -1 } }, { { 22 } },
+			{ { 23 } }, { { 24 } }, { { -1 } }, { { 15 } } };
+	int[] endWhen = { -1, -1, -1, -1, -4, -1, -1, -8, -1, -1, -1, -5, -5, -2,
+			-3, -1, -1, -6, -1, -7, -1, -7, -1, -1, -11, -3 };
 
 	ArrayList<String[]> words;
 	ArrayList<String[]> Verbs;
@@ -453,15 +453,14 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 				nw[b] = 91;
 
 			} else if (st.charAt(b) == 'é') {
-				nw[b] = 4;
+				nw[b] = 5;
 			} else if (st.charAt(b) == 'á') {
-				nw[b] = 0;
+				nw[b] = 1;
 			} else if (st.charAt(b) == 'ó') {
-				nw[b] = 14;
+				nw[b] = 15;
 			} else if (st.charAt(b) == 'í') {
-				nw[b] = 8;
+				nw[b] = 9;
 			}
-
 		}
 		return nw;
 	}
@@ -584,7 +583,7 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 				// UNNECESSARY
 				System.out.print("(" + words.get(nums[i])[1] + ")");
 			} else {
-				System.out.println(" Misunderstand (" + i + ")");
+				System.out.print(" Misunderstand (" + i + ")");
 				understandAll = false;
 			}
 		}
@@ -1074,6 +1073,9 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 		words.add(new String[] { "what", "Question", "what" });
 		// Confusing
 		words.add(new String[] { "that", "Adjective", "that" });
+
+		words.add(new String[] { "right", "Adverb", "right" });
+		words.add(new String[] { "now", "Adverb", "now" });
 	}
 
 	private void initVerbs() {
