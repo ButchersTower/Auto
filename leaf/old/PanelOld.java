@@ -1,4 +1,4 @@
-package Auto.leaf;
+package Auto.leaf.old;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -15,9 +15,11 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-import Auto.leaf.old.GameCharacter;
+import Auto.leaf.Decypher;
+import Auto.leaf.JaMa;
+import Auto.leaf.Words;
 
-public class Panel extends JPanel implements MouseListener, KeyListener {
+public class PanelOld extends JPanel implements MouseListener, KeyListener {
 	// Clicking mouse draws the screen.
 
 	private static int width = 360;
@@ -69,7 +71,7 @@ public class Panel extends JPanel implements MouseListener, KeyListener {
 		characters.add(new GameCharacter("computer", this));
 	}
 
-	public Panel() {
+	public PanelOld() {
 		super();
 
 		setPreferredSize(new Dimension(width, height));

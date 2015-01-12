@@ -1,7 +1,11 @@
-package Auto.leaf;
+package Auto.leaf.old;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import Auto.leaf.Decypher;
+import Auto.leaf.JaMa;
+import Auto.leaf.Panel;
 
 public class GameCharacter {
 	// "// REDUNDANT" is a thing
@@ -200,8 +204,6 @@ public class GameCharacter {
 		// (0)(1)[1][0] = go
 		// (0)(1)[1][1] = home
 
-		System.out.println("here");
-
 		boolean nameFound = false;
 		for (int a = 0; a < newChars.size(); a++) {
 			if (newChars.get(a).get(0).get(0)[0].equals(person)) {
@@ -229,11 +231,11 @@ public class GameCharacter {
 									}
 								}
 								if (!alreadyAdded) {
-									System.out.println("AKREADY ADDED");
+									System.out.println("ALREADY ADDED");
 									// appendStringAR
 									String[] oldStr = newChars.get(a).get(b)
 											.get(c);
-									String[] newStr = panel.appendStringAr(
+									String[] newStr = JaMa.appendStringAr(
 											oldStr, newAdj);
 									newChars.get(a).get(b).set(c, newStr);
 
@@ -417,11 +419,11 @@ public class GameCharacter {
 						// Removes the "to" from the verb by isolating the
 						// second word
 						String newVerb = verb.split("[ ]")[1];
-						// Search through VerbsAl and find the infinitive then
+						// Search through verbsAl and find the infinitive then
 						// find the tense.
-						for (int v = 0; v < panel.Verbs.size(); v++) {
-							if (panel.Verbs.get(v)[0].equals(newVerb)) {
-								newVerb = panel.Verbs.get(v)[tenseOfVerb];
+						for (int v = 0; v < panel.verbs.size(); v++) {
+							if (panel.verbs.get(v)[0].equals(newVerb)) {
+								newVerb = panel.verbs.get(v)[tenseOfVerb];
 							}
 						}
 						System.out.println("NewVerb: " + newVerb);
@@ -435,8 +437,8 @@ public class GameCharacter {
 
 						// If after the object there is an adjective
 						if (newChars.get(a).get(b).get(1).length > 1) {
-							int nextWordNum = panel.numOfWord(newChars.get(a)
-									.get(b).get(1)[1]);
+							int nextWordNum = Decypher.numOfWord(newChars
+									.get(a).get(b).get(1)[1]);
 							System.out.println("This Word: "
 									+ panel.words.get(nextWordNum)[0]);
 							if (panel.words.get(nextWordNum)[1]
@@ -571,11 +573,11 @@ public class GameCharacter {
 					// Removes the "to" from the verb by isolating the
 					// second word
 					String newVerb = verb.split("[ ]")[1];
-					// Search through VerbsAl and find the infinitive then
+					// Search through verbsAl and find the infinitive then
 					// find the tense.
-					for (int v = 0; v < panel.Verbs.size(); v++) {
-						if (panel.Verbs.get(v)[0].equals(newVerb)) {
-							newVerb = panel.Verbs.get(v)[tenseOfVerb];
+					for (int v = 0; v < panel.verbs.size(); v++) {
+						if (panel.verbs.get(v)[0].equals(newVerb)) {
+							newVerb = panel.verbs.get(v)[tenseOfVerb];
 						}
 					}
 					panel.takeIn("(C) i do not know what " + otherPerson + " "
@@ -612,11 +614,11 @@ public class GameCharacter {
 			// Removes the "to" from the verb by isolating the
 			// second word
 			String newVerb = "be";
-			// Search through VerbsAl and find the infinitive then
+			// Search through verbsAl and find the infinitive then
 			// find the tense.
-			for (int v = 0; v < panel.Verbs.size(); v++) {
-				if (panel.Verbs.get(v)[0].equals(newVerb)) {
-					newVerb = panel.Verbs.get(v)[tenseOfVerb];
+			for (int v = 0; v < panel.verbs.size(); v++) {
+				if (panel.verbs.get(v)[0].equals(newVerb)) {
+					newVerb = panel.verbs.get(v)[tenseOfVerb];
 				}
 			}
 			panel.takeIn("(C) i do not know who " + otherPerson + " " + newVerb
@@ -689,11 +691,11 @@ public class GameCharacter {
 						// Removes the "to" from the verb by isolating the
 						// second word
 						String newVerb = verb.split("[ ]")[1];
-						// Search through VerbsAl and find the infinitive then
+						// Search through verbsAl and find the infinitive then
 						// find the tense.
-						for (int v = 0; v < panel.Verbs.size(); v++) {
-							if (panel.Verbs.get(v)[0].equals(newVerb)) {
-								newVerb = panel.Verbs.get(v)[tenseOfVerb];
+						for (int v = 0; v < panel.verbs.size(); v++) {
+							if (panel.verbs.get(v)[0].equals(newVerb)) {
+								newVerb = panel.verbs.get(v)[tenseOfVerb];
 							}
 						}
 						// "you possess cat"
@@ -731,10 +733,10 @@ public class GameCharacter {
 					}
 
 					String newVerb = verb.split("[ ]")[1];
-					for (int v = 0; v < panel.Verbs.size(); v++) {
-						if (panel.Verbs.get(v)[0].equals(newVerb)) {
+					for (int v = 0; v < panel.verbs.size(); v++) {
+						if (panel.verbs.get(v)[0].equals(newVerb)) {
 							System.out.println("find be");
-							newVerb = panel.Verbs.get(v)[tenseOfVerb];
+							newVerb = panel.verbs.get(v)[tenseOfVerb];
 						}
 					}
 					panel.takeIn("(C) i do not know what " + otherPerson + " "
@@ -772,10 +774,10 @@ public class GameCharacter {
 			}
 
 			String newVerb = "be";
-			for (int v = 0; v < panel.Verbs.size(); v++) {
-				if (panel.Verbs.get(v)[0].equals(newVerb)) {
+			for (int v = 0; v < panel.verbs.size(); v++) {
+				if (panel.verbs.get(v)[0].equals(newVerb)) {
 					System.out.println("find be");
-					newVerb = panel.Verbs.get(v)[tenseOfVerb];
+					newVerb = panel.verbs.get(v)[tenseOfVerb];
 				}
 			}
 
